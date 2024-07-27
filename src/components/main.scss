@@ -1,0 +1,103 @@
+$borderRadius : 15px;
+$backgroundColor : white;
+$border : 1px solid #ebeff9;
+$fontSizeNav : 14px;
+$textColor : black;
+@mixin flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+//BODY//
+
+@font-face {
+    font-family: "yekan";
+    src: url(../font/iranyekanwebbold.ttf);
+}
+
+body{
+    font-family: yekan;
+}
+
+//BODY//
+
+//NAVBAR//
+
+nav{
+    font-size: $fontSizeNav;
+}
+
+.my-nav-btn-sidebar{
+    background-color: $backgroundColor;
+    border: $border;
+    border-radius: $borderRadius;
+}
+
+.my-nav-btn-sidebar:hover{@extend .my-nav-btn-sidebar}
+
+.my-nav-search{
+    background-color: #f8f8fc;
+    $borderRadius:10px;
+    border-radius: $borderRadius;
+    border: $border;
+    height: 40px;
+}
+
+.my-nav-input-search{
+    background: none;
+    border: none;
+    height: 30px;
+    outline: none;
+    border-left: 1px solid #ebeff9;
+    width: 165px;
+}
+
+.my-nav-btn-search-list:hover{
+    background-color: $backgroundColor;
+}
+
+.my-nav-ul{
+    margin-top: 5px ;
+    li{
+        margin: 0px 10px;
+        a{
+            text-decoration: none;
+            color: $textColor;
+        }
+    }
+}
+
+.my-nav-btn-project{
+    background-color: #fefbf6;
+    border: 2px solid #e4911f;
+    color: #e4911f;
+    padding: 10px 20px;
+    @include flex;
+    font-size: $fontSizeNav;
+}
+
+.my-nav-btn-project:hover{background-color: #e4911f; color: white;}
+
+.my-nav-btn-login{
+    border: $border;
+    @include flex;
+    padding: 6px 24px 12px 24px;
+    font-size: $fontSizeNav;
+}
+
+.my-nav-btn-login:hover{@extend .my-nav-btn-login}
+
+.my-nav-btn-register{
+    padding: 8px 24px 8px 24px;
+    border: 2px solid #4160f5;
+    font-size: $fontSizeNav;
+}
+.my-nav-btn-register:hover{@extend .my-nav-btn-register}
+
+.my-nav-number{
+    text-decoration: none;
+    color: $textColor;
+    font-size: 15px;
+}
+//NAVBAR//
