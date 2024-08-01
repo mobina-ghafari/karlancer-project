@@ -1,7 +1,7 @@
 $borderRadius : 15px;
 $backgroundColor : white;
 $border : 1px solid #ebeff9;
-$fontSizeNav : 14px;
+$fontSizeNav : 13px;
 $textColor : black;
 @mixin flex {
     display: flex;
@@ -50,10 +50,48 @@ nav{
     height: 30px;
     outline: none;
     border-left: 1px solid #ebeff9;
-    width: 165px;
+    width: 200px;
 }
 
-.my-nav-btn-search-list:hover{
+.my-nav-menu-search{
+        position: absolute;
+        top: 70px;
+        right: 400px;
+        background-color: $backgroundColor;
+        border: $border;
+        border-radius: 5px;
+        padding: 0px;
+    ul{
+        list-style: none;
+        padding: 5px;
+        margin: 0px;
+
+        li{
+            padding: 5px 10px;
+            margin: 0px;
+            border-radius: 5px;
+
+            a{
+                text-decoration: none;
+                font-size: 12px;
+                color: $textColor;
+
+                .my-nav-menu-icon{
+                    color: #4160f5;
+                }
+            }
+        }
+
+        li:hover{
+            background-color: #f8f8fc;
+            border: $border;
+        }
+    }
+}
+
+.my-nav-name-search{padding: 8px 20px; cursor: pointer;}
+
+.my-nav-name-search:hover{
     background-color: $backgroundColor;
 }
 
@@ -72,7 +110,7 @@ nav{
     background-color: #fefbf6;
     border: 2px solid #e4911f;
     color: #e4911f;
-    padding: 10px 20px;
+    padding: 10px 15px;
     @include flex;
     font-size: $fontSizeNav;
 }
@@ -82,14 +120,14 @@ nav{
 .my-nav-btn-login{
     border: $border;
     @include flex;
-    padding: 6px 24px 12px 24px;
+    padding: 10px 20px;
     font-size: $fontSizeNav;
 }
 
 .my-nav-btn-login:hover{@extend .my-nav-btn-login}
 
 .my-nav-btn-register{
-    padding: 8px 24px 8px 24px;
+    padding: 10px 20px;
     border: 2px solid #4160f5;
     font-size: $fontSizeNav;
 }
@@ -100,4 +138,8 @@ nav{
     color: $textColor;
     font-size: 15px;
 }
+
+//RESPONSIVE//
+
+//RESPONSIVE//
 //NAVBAR//
