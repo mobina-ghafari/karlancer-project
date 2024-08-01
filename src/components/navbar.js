@@ -1,6 +1,60 @@
+import { useRef, useState , useEffect } from 'react';
 import logoNav from '../img/logo1.png';
 
 const Navbar =()=>{
+  const [menu , setMenu] = useState(false);
+  const menuRef = useRef(null);
+  const [menuText , setMenuText] = useState("درفریلنسرها");
+  const [menuNewText , setMenuNewText] = useState(
+   [ {
+      id:1,
+    name:"فریلنسرها",
+    text:"استخدام حرفه ای ترین فریلنسرها",
+    icon:<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+    <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+    </svg>
+    },
+    {
+      id:2,
+    name:"پروژه ها",
+    text:"کسب درآمد از طریق انجام پروژه",
+    icon:<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-file-earmark-medical-fill" viewBox="0 0 16 16">
+    <path d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0M9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1m-3 2v.634l.549-.317a.5.5 0 1 1 .5.866L7 7l.549.317a.5.5 0 1 1-.5.866L6.5 7.866V8.5a.5.5 0 0 1-1 0v-.634l-.549.317a.5.5 0 1 1-.5-.866L5 7l-.549-.317a.5.5 0 0 1 .5-.866l.549.317V5.5a.5.5 0 1 1 1 0m-2 4.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1m0 2h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1"/>
+    </svg>
+    },
+    {
+      id:3,
+      name:"خدمات",
+      text:"جستجو میان خدمات تخصصی",
+      icon:<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-bounding-box" viewBox="0 0 16 16">
+      <path d="M5 2V0H0v5h2v6H0v5h5v-2h6v2h5v-5h-2V5h2V0h-5v2zm6 1v2h2v6h-2v2H5v-2H3V5h2V3zm1-2h3v3h-3zm3 11v3h-3v-3zM4 15H1v-3h3zM1 4V1h3v3z"/>
+      </svg>
+    },
+    {
+      id:4,
+      name:"نمونه کارها",
+      text:"بیش از۱۰۰ هزار نمونه کار",
+      icon:<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-image-fill" viewBox="0 0 16 16">
+      <path d="M.002 3a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-12a2 2 0 0 1-2-2zm1 9v1a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V9.5l-3.777-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062zm5-6.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0"/>
+      </svg>
+    },]
+  )
+
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setMenu(false); // بستن منو وقتی کاربر خارج از المنت کلیک کند
+      }
+    }
+
+    document.addEventListener('mousedown', handleClickOutside);
+
+    // پاکسازی event listener هنگام unmount شدن کامپوننت
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [menuRef]);
+
     return(
         <nav dir="rtl" className="navbar navbar-expand-lg navbar-light px-5">
             <div className="d-flex align-items-center ">
@@ -17,9 +71,23 @@ const Navbar =()=>{
                     </svg>
                     </button>
                     <input type='text' placeholder='جستجو' className='my-nav-input-search' />
-                    <button className='my-nav-btn-search-list btn'>در فریلنسرها <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
-                      <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
-                      </svg></button>
+                    <div ref={menuRef} onClick={handleMenu} className="">
+                      <span className='my-nav-name-search'>{menuText}</span>
+                      {menu && 
+                        <div className='my-nav-menu-search'>
+                        {menuNewText.map((m,index)=>(<ul key={index}>
+                          <li>
+                          <a href='#' className='d-flex align-items-center'>
+                            <div className='my-nav-menu-icon'>{m.icon}</div>
+                            <div className='d-flex flex-column me-3'>
+                              <span>{m.name}</span>
+                              <span>{m.text}</span>
+                            </div>
+                            </a>
+                          </li>
+                        </ul>))}
+                      </div>}
+                    </div>
                 </div>
                 <ul className='my-nav-ul d-flex ' style={{listStyle:"none"}}>
                     <li className=''>
@@ -53,6 +121,10 @@ const Navbar =()=>{
             </div>
         </nav>
     )
+
+    function handleMenu (){
+      setMenu(!menu);
+    };
 }
 
 export default Navbar;
