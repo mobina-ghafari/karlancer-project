@@ -1,5 +1,6 @@
 import { useRef, useState , useEffect } from 'react';
 import logoNav from '../img/logo1.png';
+import Sidebar from './sidebar';
 
 const Navbar =()=>{
   const [menu , setMenu] = useState(false);
@@ -56,13 +57,10 @@ const Navbar =()=>{
   }, [menuRef]);
 
     return(
-        <nav dir="rtl" className="navbar navbar-expand-lg navbar-light px-5">
+        <>
+        <Sidebar pageWrapId='page-wrap' outerContainerId='App' />
+        <nav dir="rtl" className="navbar navbar-expand-lg navbar-light d-flex justify-content-center ">
             <div className="d-flex align-items-center ">
-                <button className="my-nav-btn-sidebar btn d-flex align-items-center p-2">
-                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list " viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
-                </svg>
-                </button>
                 <img src={logoNav} width={"110px"} height={"41px"} alt="" className='mx-3' />
                 <div className='my-nav-search d-flex align-items-center justify-content-center me-2'>
                     <button className='my-nav-btn-search-icon btn'>
@@ -120,6 +118,7 @@ const Navbar =()=>{
                 <a href='#' className='my-nav-number me-4'>۰۲۱-۲۸۴۲۶۴۴۳</a>
             </div>
         </nav>
+        </>
     )
 
     function handleMenu (){
