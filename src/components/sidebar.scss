@@ -1,0 +1,121 @@
+$borderRadius : 10px;
+$backgroundColor : white;
+$border : 1px solid #ebeff9;
+$fontSizeNav : 14px;
+$textColor : black;
+@mixin flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+html,
+body {
+  margin: 0;
+}
+
+#App {
+  font-family: sans-serif;
+  height: 100vh;
+}
+
+#page-wrap {
+  text-align: center;
+  overflow: auto;
+}
+
+.bm-item {
+  display: inline-block;
+  text-decoration: none;
+  margin-bottom: 10px;
+  color: #d1d1d1;
+  transition: color 0.2s;
+}
+
+
+.bm-item:hover {
+  color: white;
+}
+
+
+.bm-burger-button {
+    position: relative;
+    width: 32px;
+    height: 20px;
+    right: 20px;
+    top: 22px;
+    /* right: 0; */
+    float: right;
+    color: black;
+}
+
+
+.bm-burger-bars {
+  background: #373a47;
+}
+
+
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+
+.bm-cross {
+  background: #4160f5;
+}
+
+.bm-menu {
+  background: white;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+  text-align: end;
+}
+
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+
+.bm-item-list {
+  color: #b8b7ad;
+}
+
+
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.sidebar-first-item{
+    background-color: #4160f5;
+    border-radius: $borderRadius;
+    padding: 20px 0px;
+    font-size: 18px;
+    color: white;
+    margin-top: 20px;
+    
+}
+
+.sidebar-items-main{
+    color: #4160f5;
+    font-size: 18px;
+    margin-top: 20px;
+    direction: ltr;
+}
+
+.sidebar-items{
+    @extend .sidebar-items-main;
+    color: #767d8c;
+    margin-top: 15px;
+}
+
+.sidebar-items-main:hover{
+    color: #4160f5;
+}
+
+.sidebar-items:hover{
+    color: #4160f5;
+}
