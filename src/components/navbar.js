@@ -1,5 +1,6 @@
 import { useRef, useState , useEffect } from 'react';
 import logoNav from '../img/logo1.png';
+import logoNavSmall from '../img/logo2.png';
 import Sidebar from './sidebar';
 
 const Navbar =()=>{
@@ -44,32 +45,35 @@ const Navbar =()=>{
   useEffect(() => {
     function handleClickOutside(event) {
       if (menuRef.current && !menuRef.current.contains(event.target)) {
-        setMenu(false); // بستن منو وقتی کاربر خارج از المنت کلیک کند
+        setMenu(false); 
       }
     }
 
     document.addEventListener('mousedown', handleClickOutside);
 
-    // پاکسازی event listener هنگام unmount شدن کامپوننت
+    
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
   }, [menuRef]);
 
     return(
-        <>
-        <Sidebar pageWrapId='page-wrap' outerContainerId='App' />
-        <nav dir="rtl" className="navbar navbar-expand-lg navbar-light d-flex justify-content-center ">
+        <div className='container-fluid'>
+        <div class="row p-0 m-0">
+        <div className='col-1 m-0 p-0'><Sidebar pageWrapId='page-wrap' outerContainerId='App' /></div>
+        <div className='col-11 m-0 p-0'>
+        <nav dir="rtl" className="d-flex justify-content-start py-2 ">
             <div className="d-flex align-items-center ">
-                <img src={logoNav} width={"110px"} height={"41px"} alt="" className='mx-3' />
-                <div className='my-nav-search d-flex align-items-center justify-content-center me-2'>
+                <img src={logoNav} alt="" className='ms-3  my-nav-logo1' />
+                <img src={logoNavSmall} width={"40px"} height={""} alt="" className='ms-3  my-nav-logo2'/>
+                <div className='my-nav-search d-flex align-items-center justify-content-center ms-4'>
                     <button className='my-nav-btn-search-icon btn'>
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
                     <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
                     </svg>
                     </button>
                     <input type='text' placeholder='جستجو' className='my-nav-input-search' />
-                    <div ref={menuRef} onClick={handleMenu} className="">
+                    <div ref={menuRef} onClick={handleMenu} className="my-nav-input-search-btn-menu">
                       <span className='my-nav-name-search'>{menuText}</span>
                       {menu && 
                         <div className='my-nav-menu-search'>
@@ -77,7 +81,7 @@ const Navbar =()=>{
                           <li>
                           <a href='#' className='d-flex align-items-center'>
                             <div className='my-nav-menu-icon'>{m.icon}</div>
-                            <div className='d-flex flex-column me-3'>
+                            <div className='d-flex flex-column'>
                               <span>{m.name}</span>
                               <span>{m.text}</span>
                             </div>
@@ -88,37 +92,40 @@ const Navbar =()=>{
                     </div>
                 </div>
                 <ul className='my-nav-ul d-flex ' style={{listStyle:"none"}}>
-                    <li className=''>
+                    <li className='ms-4'>
                       <a href='#' className=''>
-                        برونسپاری <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                        برونسپاری <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
                         </svg>
                       </a>
                     </li>
-                    <li className=''>
+                    <li className='ms-4'>
                       <a href='#' className=''>
-                      آموزش آنلاین <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                      آموزش آنلاین <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
                       <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
                       </svg> 
                       </a>
                     </li>
-                    <li className=''>
+                    <li className='ms-4'>
                       <a href='#' className=''>
-                      کسب درآمد <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                      کسب درآمد <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
                       <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
                       </svg>
                       </a>
                     </li>
                 </ul>
             </div>
-            <div className="d-flex align-items-center me-5">
-                <button className='my-nav-btn-project btn mx-1'>ثبت پروژه رایگان</button>
-                <button className='my-nav-btn-login btn mx-1'>ورود</button>
-                <button className='my-nav-btn-register btn mx-1'>ثبت نام</button>
+            <div className="d-flex align-items-center  my-nav-btns-margin">
+                <button className='my-nav-btn-project btn '>ثبت پروژه رایگان</button>
+                <button className='my-nav-btn-login btn mx-2'>ورود</button>
+                <button className='my-nav-btn-register btn '>ثبت نام</button>
                 <a href='#' className='my-nav-number me-4'>۰۲۱-۲۸۴۲۶۴۴۳</a>
             </div>
+            <button className='my-nav-btn-project-small btn '>ثبت پروژه رایگان</button>
         </nav>
-        </>
+        </div>
+        </div>
+        </div>
     )
 
     function handleMenu (){
