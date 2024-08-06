@@ -58,11 +58,11 @@ const Navbar =()=>{
   }, [menuRef]);
 
     return(
-        <div className='container-fluid'>
+        <div className='container-fluid sticky-top bg-light py-1'>
         <div class="row p-0 m-0">
         <div className='col-1 m-0 p-0'><Sidebar pageWrapId='page-wrap' outerContainerId='App' /></div>
         <div className='col-11 m-0 p-0'>
-        <nav dir="rtl" className="d-flex justify-content-start py-2 ">
+        <nav dir="rtl" className="d-flex justify-content-start  py-2">
             <div className="d-flex align-items-center ">
                 <img src={logoNav} alt="" className='ms-3  my-nav-logo1' />
                 <img src={logoNavSmall} width={"40px"} height={""} alt="" className='ms-3  my-nav-logo2'/>
