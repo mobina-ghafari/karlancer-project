@@ -4,15 +4,15 @@ const Header =()=>{
     return(
         <div className="container-fluid my-header">
             <div className="row">
-                <div className="col-xl-7 col-lg-9 col-sm-12 col-xs-12 px-0 mx-auto text-center">
-                    <div className="mt-5">
-                        <h1 className="text-white mb-4">سایت دورکاری، برونسپاری پروژه و استخدام فریلنسر</h1>
-                        <span className="text-white">فضایی برای رشد کسب و کار شما - پرداخت نهایی پس از رضایت از نتیجه کار</span>
-                        <div className="row px-0 mt-5">
-                            <div className="col-lg-10 col-md-8 col-xs-4 px-0 mx-auto">
-                            <div className="d-flex justify-content-start">
+                <div className="col-xl-7 col-lg-9 col-sm-10 col-xs-10 px-0 mx-auto text-center">
+                    <div style={{marginTop:"40px"}}>
+                        <div className="text-white mb-4 my-header-h">سایت دورکاری، برونسپاری پروژه و استخدام فریلنسر</div>
+                        <span className="text-white my-header-span">فضایی برای رشد کسب و کار شما - پرداخت نهایی پس از رضایت از نتیجه کار</span>
+                        <div className="row px-0 mt-4 mx-0">
+                            <div className=" col-lg-10 col-md-8 col-xs-4 px-0 mx-auto">
+                            <div className="d-flex my-header-search-issue-small">
                             <div className=" my-header-search-issue">
-                            <span className="ms-3">جستجو در</span>
+                            <span className="ms-3 my-header-search-span">جستجو در</span>
                             <div className="my-header-search-issue-input ms-1">
                             <input   checked type="radio" id="frelancer" name="issue"/>
                             <label for="frelancer"><span className="me-2">فریلنسر ها</span></label>
@@ -23,14 +23,14 @@ const Header =()=>{
                             </div>
                         </div>
                             </div>
-                        <input type="text" placeholder="جستجو رو شروع کن" className="my-header-search-input d-flex justify-content-start" />
-                        <div>
+                        <input type="text" placeholder="جستجو رو شروع کن" className="my-header-search-input d-flex" />
+                        <div className="d-flex justify-content-center">
                             <button className="my-header-btns">سئو</button>
                             <button className="my-header-btns">طراحی گرافیک</button>
                             <button className="my-header-btns">تولید محتوا</button>
                             <button className="my-header-btns">تایپ</button>
                             <button className="my-header-btns">برنامه نویسی</button>
-                            <button className="my-header-btns">طراحی سایت</button>
+                            <button className="my-header-btns btn-hide">طراحی سایت</button>
                         </div>
                             </div>
                         </div>
