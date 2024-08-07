@@ -14,12 +14,12 @@ const Header =()=>{
                             <div className=" my-header-search-issue">
                             <span className="ms-3 my-header-search-span">جستجو در</span>
                             <div className="my-header-search-issue-input ms-1">
-                            <input   checked type="radio" id="frelancer" name="issue"/>
-                            <label for="frelancer"><span className="me-2">فریلنسر ها</span></label>
+                            <input defaultChecked={true} type="radio" id="frelancer" name="issue"/>
+                            <label htmlFor="frelancer"><span className="me-2">فریلنسر ها</span></label>
                             </div>
                             <div className="my-header-search-issue-input">
                             <input type="radio" id="projects" name="issue" />
-                            <label for="projects"><span className="me-2">پروژه ها</span></label>
+                            <label htmlFor="projects"><span className="me-2">پروژه ها</span></label>
                             </div>
                         </div>
                             </div>
