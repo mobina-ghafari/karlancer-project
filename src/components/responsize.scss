@@ -262,3 +262,33 @@
     //     justify-content: center;
     // }
 }
+
+@media only screen and (min-width: 995px){
+    .my-main-img-small{
+        display: block;
+    }
+
+    .my-main-h{
+        font-size: 2.3em;
+    }
+}
+
+@media only screen and (max-width: 995px){
+    .my-main-img-small{
+        display: none;
+    }
+
+    .my-main-h{
+        font-size: 1.5em;
+    }
+}
+
+@media only screen and (max-width: 1195px){
+    .my-main-h{
+        font-size: 2em;
+    }
+}
+
+@media only screen and (min-width: 575px){
+    
+}
