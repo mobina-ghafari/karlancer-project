@@ -7,7 +7,7 @@ const Description =()=>{
                 <div className="col-xl-9 col-lg-11 col-md-9 mx-auto p-0 text-center">
                     <div className="row p-0 m-0">
                         <div className="col-xl-5 col-lg-6 p-0 m-0 text-end my-main-img-small">
-                            <img className='my-main-img' src={mainImg} width={"80%"} alt="" />
+                            <img className='my-main-img' src={mainImg} width={"75%"} height={"90%"} alt="" />
                         </div>
                         <div className="col-xl-7 col-lg-6 m-0 p-0 text-end">
                             <div>
@@ -74,7 +74,7 @@ const Description =()=>{
                                             <div><div className="my-main-list-btn" style={{border: "5px solid rgb(140,74,255)"}}></div></div>
                                             <div>
                                                 <span className='my-main-list-span'>پرداخت نهایی پس از رضایت شما</span>
-                                                <p className='my-main-list-p'>هزینه پروژه پیش از تایید نهایی نزد سیستم<br/> پرداخت امن کارلنسر به امانت می‌ماند.</p>
+                                                <p className='my-main-list-p'>هزینه پروژه پیش از تایید نهایی نزد سیستم پرداخت امن کارلنسر به امانت می‌ماند.</p>
                                             </div>
                                         </div>
                                     </div>
