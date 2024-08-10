@@ -289,6 +289,51 @@
     }
 }
 
-@media only screen and (min-width: 575px){
-    
+
+@media only screen and (min-width: 1000px){
+    .my-video-bg-light{
+        background-color: #edf1f7;
+    }
+
+    .my-video-bg-dark{
+        position: relative ;
+        left: 30px;
+        top: -30px;
+    }
+}
+
+@media only screen and (max-width: 1000px){
+    .my-video-bg-light{
+        background-color: white;
+    }
+
+    .my-video-bg-dark{
+        position: relative ;
+        left: 0px;
+        top: -10px;
+    }
+}
+
+@media only screen and (min-width: 500px){
+    .my-video-bg-dark{
+        width: 478px;
+        height: 300px;
+    }
+
+    .my-video{
+        width: 470px;
+        height: 260px;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .my-video-bg-dark{
+        width: 360px;
+        height: 200px;
+    }
+
+    .my-video{
+        width: 400px;
+        height: 150px;
+    }
 }
