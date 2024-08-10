@@ -4,6 +4,7 @@ import './components/main.scss';
 import Navbar from "./components/navbar";
 import Header from './components/header';
 import Description from './components/description';
+import Video from './components/video';
 
 
 
@@ -14,6 +15,7 @@ function App (){
     <Navbar/>
     <Header/>
     <Description/>
+    <Video/>
     </>
   )
 }
