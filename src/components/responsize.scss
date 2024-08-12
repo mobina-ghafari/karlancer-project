@@ -309,7 +309,8 @@
 
     .my-video-bg-dark{
         position: relative ;
-        left: 0px;
+        left: 3px;
+        // right: 20px;
         top: -10px;
     }
 }
@@ -328,12 +329,12 @@
 
 @media only screen and (max-width: 500px){
     .my-video-bg-dark{
-        width: 360px;
+        width: 300px;
         height: 200px;
     }
 
     .my-video{
-        width: 400px;
+        width: 280px;
         height: 150px;
     }
 }
