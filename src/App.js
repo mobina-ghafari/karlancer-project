@@ -8,6 +8,7 @@ import Video from './components/video';
 import Services from './components/services';
 import Projects from './components/projects';
 import Employment from './components/employment';
+import Freelancer from './components/freelancer';
 
 
 
@@ -22,6 +23,7 @@ function App (){
     <Services/>
     <Projects/>
     <Employment/>
+    <Freelancer/>
     </>
   )
 }
