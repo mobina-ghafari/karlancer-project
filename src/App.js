@@ -6,6 +6,8 @@ import Header from './components/header';
 import Description from './components/description';
 import Video from './components/video';
 import Services from './components/services';
+import Projects from './components/projects';
+import Employment from './components/employment';
 
 
 
@@ -18,6 +20,8 @@ function App (){
     <Description/>
     <Video/>
     <Services/>
+    <Projects/>
+    <Employment/>
     </>
   )
 }

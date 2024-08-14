@@ -1,0 +1,74 @@
+.my-employment{
+    display: flex;
+    flex-direction: column;
+}
+
+.my-border{
+    border-top: 1px solid #9ca0a5;
+}
+
+.my-employment-a{
+    position: relative;
+    display: inline-block;
+    margin: 10px 0px;
+    text-decoration: none;
+    color: #666;
+    position: relative;
+    display: inline-block;
+}
+
+.my-employment-a::after{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    transition: width 0.3s ease-in-out;
+}
+
+.my-employment-a:hover::after{
+    width: 100%;
+}
+
+
+.my-end-banner2{
+    background-color:  #2dd6b8;
+    // background-image:url(../img/Pattern-PNG-Transparent.png),;
+    margin-top: 30px;
+    border-radius: 5px;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.my-end-banner-btn2{
+    background-color: white;
+    border-radius: 10px;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    margin-top: 20px;
+}
+
+.my-end-banner-btn-span2{
+    font-size: 20px;
+    color: #2dd6b8;
+    margin-left: 20px;
+    margin-right: 10px;
+}
+
+.my-end-banner-btn-icon2{
+    background-color: #2dd6b8;
+    border-radius: 5px;
+    color: white;
+    padding: 17px;
+    display: flex;
+    align-items: center;
+}
