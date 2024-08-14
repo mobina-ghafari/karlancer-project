@@ -1,0 +1,58 @@
+.my-section{
+    background-color: #1d2447;
+    text-align: center;
+    height: 70vh;
+    padding-top: 30px;
+}
+
+.my-freelancer-text{
+    background-color: white;
+    padding: 30px;
+    border-radius: 5px;
+    position: relative;
+    top: 30px;
+}
+
+.my-freelancer-p{
+    line-height: 40px;
+}
+
+.my-end-banner3{
+    background-color:  #ff4757;
+    // background-image:url(../img/Pattern-PNG-Transparent.png),;
+    margin-top: 30px;
+    border-radius: 5px;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.my-end-banner-btn3{
+    background-color: white;
+    border-radius: 10px;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    margin-top: 20px;
+}
+
+.my-end-banner-btn-span3{
+    font-size: 20px;
+    color: #ff4757;
+    margin-left: 20px;
+    margin-right: 10px;
+}
+
+.my-end-banner-btn-icon3{
+    background-color: #ff4757;
+    border-radius: 5px;
+    color: white;
+    padding: 17px;
+    display: flex;
+    align-items: center;
+}
