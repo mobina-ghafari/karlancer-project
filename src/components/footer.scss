@@ -1,0 +1,128 @@
+
+
+.my-footer-list-a{
+    position: relative;
+    display: inline-block;
+    margin: 10px 0px;
+    text-decoration: none;
+    color: #666;
+    position: relative;
+    display: inline-block;
+}
+
+.my-footer-list-a::after{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    transition: width 0.3s ease-in-out;
+}
+
+.my-footer-list-a:hover::after{
+    width: 100%;
+}
+
+.my-footer-karlancer{
+    border-top: 1px solid #9ca0a5;
+    border-bottom: 1px solid #9ca0a5;
+    padding: 50px 0px;
+    margin: 50px 0px;
+}
+
+.my-footer-karlancer-h{
+    color: #4160f5;
+}
+
+.my-footer-karlancer-p{
+    font-size: 14px;
+    line-height: 35px;
+    margin-top: 20px;
+    color: #666;
+}
+
+.my-footer-about-list{
+    display: flex;
+    flex-direction: column;
+}
+
+.my-footer-about-span{
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.my-footer-about-a{
+    text-decoration: none;
+    color: #777;
+    font-size: 14px;
+    margin-top: 15px;
+    transition: all 0.5s;
+}
+
+.my-footer-about-a:hover{
+    color: #222;
+}
+
+.my-footer-about-network-span{
+    font-size: 18px;
+}
+
+.my-footer-network-icons{
+    display: flex;
+    align-items: center;
+}
+
+.my-network-icon-a{
+    text-decoration: none;
+    color: #999;
+    transition: all 0.5s;
+}
+
+.my-network-icon-a:hover{
+    color: #222;
+}
+
+.my-footer-number{
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    .number-text{
+        color: #333;
+    }
+
+    .number{
+        text-decoration: none;
+        color: #888;
+        transition: all 0.5s;
+    }
+
+    .number:hover{
+        color: #222
+    }
+}
+
+.my-footer-email{
+    @extend .my-footer-number;
+
+    .email-text{
+        color: #333;
+    }
+
+    .email{
+        text-decoration: none;
+        color: #888;
+        transition: all 0.5s;
+    }
+
+    .email:hover{
+        color: #222;
+    }
+}
+
+.my-footer-text-end{
+    font-size: 14px;
+    color: #333;
+}
+

@@ -10,6 +10,7 @@ import Projects from './components/projects';
 import Employment from './components/employment';
 import Freelancer from './components/freelancer';
 import Blog from './components/blog';
+import Footer from './components/footer';
 
 
 
@@ -26,6 +27,7 @@ function App (){
     <Employment/>
     <Freelancer/>
     <Blog/>
+    <Footer/>
     </>
   )
 }
