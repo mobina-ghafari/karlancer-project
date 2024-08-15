@@ -9,6 +9,7 @@ import Services from './components/services';
 import Projects from './components/projects';
 import Employment from './components/employment';
 import Freelancer from './components/freelancer';
+import Blog from './components/blog';
 
 
 
@@ -24,6 +25,7 @@ function App (){
     <Projects/>
     <Employment/>
     <Freelancer/>
+    <Blog/>
     </>
   )
 }
